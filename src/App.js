@@ -1,7 +1,10 @@
-import react, {useEffect} from "react";
+import React, {useEffect} from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {FiSettings} from "react-icons/fi";
 import {TooltipComponent} from "@syncfusion/ej2-react-popups"
+
+import {Navbar, Footer, Sidebar, ThemeSettings} from './components';
+import {Ecommerce, Orders, Kanban, Area, Bar, Pie, Financial, Calendar ,ColorPicker, ColorMapping, Customers, Editor, Employees, Line, Pyramid, Stacked} from './pages';
 import "./App.css";
 
 const App = () => {
@@ -32,26 +35,26 @@ const App = () => {
           </div>
           <div>
             <Routes>
-              <Route exact path="/" element="ECommerce"></Route>
-              <Route exact path="/ecommerce" element="ECommerce"></Route>
+              <Route exact path="/" element={<Ecommerce/>}></Route>
+              <Route exact path="/ecommerce" element={<Ecommerce/>}></Route>
 
-              <Route exact path="/orders" element="Orders"></Route>
-              <Route exact path="/employees" element="Employees"></Route>
-              <Route exact path="/customers" element="Customers"></Route>
+              <Route exact path="/orders" element={<Orders/>}></Route>
+              <Route exact path="/employees" element={<Employees/>}></Route>
+              <Route exact path="/customers" element={<Customers/>}></Route>
 
-              <Route exact path="/kanban" element="Kanban"></Route>
-              <Route exact path="/editor" element="Editor"></Route>
-              <Route exact path="/calender" element="Calender"></Route>
-              <Route exact path="/color-picker" element="ColorPicker"></Route>
+              <Route exact path="/kanban" element={<Kanban/>}></Route>
+              <Route exact path="/editor" element={<Editor/>}></Route>
+              <Route exact path="/calendar" element={<Calendar/>}></Route>
+              <Route exact path="/color-picker" element={<ColorPicker/>}></Route>
 
-              <Route exact path="/line" element={"Line"}></Route>
-              <Route exact path="/area" element="Area"></Route>
-              <Route exact path="/bar" element="Bar"></Route>
-              <Route exact path="/pie" element="Pie"></Route>
-              <Route exact path="/financial" element="Financial"></Route>
-              <Route exact path="/color-mapping" element="ColorMapping"></Route>
-              <Route exact path="/pyramid" element="Pyramid"></Route>
-              <Route exact path="/stacked" element="Stacked"></Route>
+              <Route exact path="/line" element={<Line/>}></Route>
+              <Route exact path="/area" element={<Area/>}></Route>
+              <Route exact path="/bar" element={<Bar/>}></Route>
+              <Route exact path="/pie" element={<Pie/>}></Route>
+              <Route exact path="/financial" element={<Financial/>}></Route>
+              <Route exact path="/color-mapping" element={<ColorMapping/>}></Route>
+              <Route exact path="/pyramid" element={<Pyramid/>}></Route>
+              <Route exact path="/stacked" element={<Stacked/>}></Route>
             </Routes>
           </div>
         </div>
