@@ -6,9 +6,10 @@ import {TooltipComponent} from "@syncfusion/ej2-react-popups"
 import {Navbar, Footer, Sidebar, ThemeSettings} from './components';
 import {Ecommerce, Orders, Kanban, Area, Bar, Pie, Financial, Calendar ,ColorPicker, ColorMapping, Customers, Editor, Employees, Line, Pyramid, Stacked} from './pages';
 import "./App.css";
+import {useStateContext} from "./contexts/ContextProvider";
 
 const App = () => {
-  const activeMenu = true;
+  const {activeMenu} = useStateContext();
   return (
     <div>
       <Router>
@@ -30,7 +31,7 @@ const App = () => {
           )}
           <div className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${(activeMenu)?("md:ml-72"):("flex-2")}`}>
             <div className="fixed md-static bg-main-bg dark:bg-main-dark-bg navbar w-full">
-              Navbar
+              <Navbar/>
             </div>
           </div>
           <div>
