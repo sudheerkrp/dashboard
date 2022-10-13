@@ -33,30 +33,30 @@ const App = () => {
             <div className="fixed md-static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar/>
             </div>
-          </div>
-          <div>
-            <Routes>
-              <Route exact path="/" element={<Ecommerce/>}></Route>
-              <Route exact path="/ecommerce" element={<Ecommerce/>}></Route>
+            <div>
+              <Routes>
+                <Route exact path="/" element={<Ecommerce/>}></Route>
+                <Route exact path="/ecommerce" element={<Ecommerce/>}></Route>
 
-              <Route exact path="/orders" element={<Orders/>}></Route>
-              <Route exact path="/employees" element={<Employees/>}></Route>
-              <Route exact path="/customers" element={<Customers/>}></Route>
+                <Route exact path="/orders" element={<Orders/>}></Route>
+                <Route exact path="/employees" element={<Employees/>}></Route>
+                <Route exact path="/customers" element={<Customers/>}></Route>
 
-              <Route exact path="/kanban" element={<Kanban/>}></Route>
-              <Route exact path="/editor" element={<Editor/>}></Route>
-              <Route exact path="/calendar" element={<Calendar/>}></Route>
-              <Route exact path="/color-picker" element={<ColorPicker/>}></Route>
+                <Route exact path="/kanban" element={<Kanban/>}></Route>
+                <Route exact path="/editor" element={<Editor/>}></Route>
+                <Route exact path="/calendar" element={<Calendar/>}></Route>
+                <Route exact path="/color-picker" element={<ColorPicker/>}></Route>
 
-              <Route exact path="/line" element={<Line/>}></Route>
-              <Route exact path="/area" element={<Area/>}></Route>
-              <Route exact path="/bar" element={<Bar/>}></Route>
-              <Route exact path="/pie" element={<Pie/>}></Route>
-              <Route exact path="/financial" element={<Financial/>}></Route>
-              <Route exact path="/color-mapping" element={<ColorMapping/>}></Route>
-              <Route exact path="/pyramid" element={<Pyramid/>}></Route>
-              <Route exact path="/stacked" element={<Stacked/>}></Route>
-            </Routes>
+                <Route exact path="/line" element={<Line/>}></Route>
+                <Route exact path="/area" element={<Area/>}></Route>
+                <Route exact path="/bar" element={<Bar/>}></Route>
+                <Route exact path="/pie" element={<Pie/>}></Route>
+                <Route exact path="/financial" element={<Financial/>}></Route>
+                <Route exact path="/color-mapping" element={<ColorMapping/>}></Route>
+                <Route exact path="/pyramid" element={<Pyramid/>}></Route>
+                <Route exact path="/stacked" element={<Stacked/>}></Route>
+              </Routes>
+            </div>
           </div>
         </div>
       </Router>
