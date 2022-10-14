@@ -20,7 +20,7 @@ const NavButton = ({title, customFunc, icon, color, dotColor}) => (
 );
 
 const Navbar = () => {
-  const {activeMenu, setActiveMenu, isClicked, setIsClicked, handelClick, screenSize, setScreenSize} = useStateContext();
+  const {activeMenu, setActiveMenu, isClicked, setIsClicked, handelClick, screenSize, setScreenSize, currentColor} = useStateContext();
 
   useEffect(() => {
     const handelResize = () => setScreenSize(window.innerWidth);
@@ -41,11 +41,11 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
-      <NavButton title="Menu" customFunc={()=>setActiveMenu((prevActiveMenu)=> (!prevActiveMenu))} color="blue" icon={<AiOutlineMenu></AiOutlineMenu>}/>
+      <NavButton title="Menu" customFunc={()=>setActiveMenu((prevActiveMenu)=> (!prevActiveMenu))} color={currentColor} icon={<AiOutlineMenu></AiOutlineMenu>}/>
       <div className='flex'>
-        <NavButton title="Cart" customFunc={()=> handelClick('cart')} color="blue" icon={<FiShoppingCart></FiShoppingCart>}/>
-        <NavButton title="Chat" dotColor='#03C907' customFunc={()=> handelClick('chat')} color="blue" icon={<BsChatLeft></BsChatLeft>}/>
-        <NavButton title="Notification" dotColor='#03C907' customFunc={()=> handelClick('notification')} color="blue" icon={<RiNotification3Line></RiNotification3Line>}/>
+        <NavButton title="Cart" customFunc={()=> handelClick('cart')} color={currentColor} icon={<FiShoppingCart></FiShoppingCart>}/>
+        <NavButton title="Chat" dotColor='#03C907' customFunc={()=> handelClick('chat')} color={currentColor} icon={<BsChatLeft></BsChatLeft>}/>
+        <NavButton title="Notification" dotColor='#03C907' customFunc={()=> handelClick('notification')} color={currentColor} icon={<RiNotification3Line></RiNotification3Line>}/>
         <TooltipComponent content="Profile" position="BottomCenter">
           <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg' onClick={()=> handelClick('userProfile')}>
             <img className='rounded-full w-8 h-8' src={avatar} alt=""/>
